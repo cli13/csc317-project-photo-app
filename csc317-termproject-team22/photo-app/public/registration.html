@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration | Snap-22</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+        <!-- Need to switch to above comments, use below only when opening files directly -->
+        <!-- <link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css"> -->
+        <script defer type="text/javascript" src="javascripts/formvalidation.js"></script>
+    
+    </head>
+
+    <body>
+        <form id="registration-form" action="/register" method="POST">
+            <h1 class="title-center"> Sign Up/Register </h1>
+            <br />
+            <br />
+            <br />
+            <br />
+            <input type="text" placeholder="Username" name="username" class="username">
+            <p id="username-required" class="required"><br /></p>
+            <br />
+            <input type="email" placeholder="Email" name="email" class="email" id="registration-email">
+            <p id="email-required" class="required"><br /></p>
+            <br />
+            <input type="password" placeholder="Password" name="password" class="password" id="registration-password">
+            <p id="password-required" class="required"><br /></p>
+            <br />
+            <input type="password" placeholder="Confirm Password" name="confirm-password" id="confirm-password">
+            <p id="confirm-required" class="required"><br /></p>
+            <br />
+            <label for="13years"> Agree that you are 13+ Years of Age </label>
+            <input type="checkbox" id="13years" name="13YearsOld" required>
+            <br />
+            <br />
+            <!-- I am just using google link as placeholder as of now, will replace with actual link later -->
+            <label for="TOS"> Agree to<a href="google.com">Terms of Service</a>and<a href="google.com">Privacy Rules</a></label>
+            <input type="checkbox" id="TOS" name="TOS" required>
+            <br />
+            <br />
+            <br />
+            <div class="submit-flex" id="registration-submit-flex">
+                    <input type="submit" name="submit" value="Sign Up" class="submit">
+                    <a href="/" class="cancel" id="registration-cancel"> Cancel </a>
+                </div>
+        </form>
+    </body>
+</html>

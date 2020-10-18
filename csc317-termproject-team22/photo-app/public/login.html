@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Snap-22</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+    <!-- Need to switch to above comments, use below only when opening files directly -->
+    <!-- <link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css"> -->
+    <script defer type="text/javascript" src="javascripts/formvalidation.js"></script>
+</head>
+
+<body>
+    <form id="login-form" action="/login" method="POST">
+        <h1 class="title-center"> Snap-22 </h1>
+        <br />
+        <br />
+        <br />
+        <br />
+        <input type="text" placeholder="Username" name="username" class="username">
+        <p id="username-required" class="required"><br /></p>
+        <br />
+        <br />
+        <input type="password" placeholder="Password" name="password" class="password">
+        <p id="password-required" class="required"><br /></p>
+        <br />
+        <br />
+        <div class="submit-flex">
+            <input type="submit" name="submit" value="Login" class="submit">
+            <a href="/" class="cancel" id="login-cancel"> Cancel </a>
+        </div>
+    </form>
+</body>
+
+</html>

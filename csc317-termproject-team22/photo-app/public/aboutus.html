@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script defer type="text/javascript" src="javascripts/sidebarstyle.js"></script>
+    <script defer type="text/javascript" src="javascripts/searchBar.js"></script>
+</head>
+
+<body class="grid-container">
+    <header class="topnav">
+        <a href="javascript:void(0)" class="open-nav"></a>
+        <a id="logo" class="active" href="/"></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search.." name="search">
+            <a id="search-submit"></a>
+        </div>
+
+        <p id="displayName">
+
+        </p>
+
+    </header>
+
+    <nav class="sidebar sidebar-flex">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+            <div id="displayLogin">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Sign Up/Register</a></li>
+            </div>
+            <div id="displayContent">
+                <li><a href="/post-image">Post Image</a></li>
+                <form id="logout" action="/logout" method="POST"><input type="hidden" name="logout" value="value" />
+                    <li> <a class="pointer" onclick="document.getElementById('logout').submit();">Logout</a>
+                </form>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    <main class="content postform">
+        <div class="left-m">
+            <h1> About Us </h1>
+            <p> We are students at San Francisco State University. This is our final term project of a image posting web application.
+            </p>
+        </div>
+    </main>
+    <footer class="footer"></footer>
+
+</body>
+
+</html>

@@ -1,0 +1,802 @@
+body {
+    margin: 0%;
+    height: inherit;
+    font-family: Roobert, Helvetica Neue, Helvetica;
+    background-color: #0E0E10;
+    overflow-x: hidden;
+    color: #EFEFF1;
+    overflow: hidden;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+input:checked+.slider {
+    background-color: #9147FF;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 .5px #9147FF;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+html {
+    height: 100%;
+}
+
+a {
+    margin: 10px;
+    color: #00B7FF;
+}
+
+h1 {
+    color: #EFEFF1;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    border: 0px;
+    border-bottom: 2px solid #9147FF;
+    width: 25%;
+    padding: 5px;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border: 0px;
+    border-bottom: 2px solid purple;
+    width: 50%;
+}
+
+textarea {
+    position: relative;
+    resize: none;
+    overflow: auto;
+    height: 30px;
+    -webkit-transition: height 1s;
+    transition: height 1s;
+    width: min-content;
+}
+
+textarea:focus {
+    height: 80px;
+    width: 100%;
+}
+
+.page-flex {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+    border-bottom: none;
+    transition: 0.5s;
+    height: 100%;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+#search-submit {
+    display: block;
+    height: 6px;
+    width: 30px;
+    margin-top: 16px;
+    margin-left: 0;
+    background-image: url('../images/search-icon.png');
+    background-color: white;
+    border: none;
+    border-left: 2px solid lightgray;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+}
+
+#search-submit:hover {
+    background-size: 27px 27px;
+    background-color: lightgray;
+}
+
+#search-submit:focus {
+    outline: none;
+}
+
+
+/* 2 cols the orginal one*/
+
+.grid-container2 {
+    display: grid;
+    display: -moz-grid;
+    grid-template-rows: 100px 2fr 2fr 150px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header" "content content" "footer footer";
+    gap: 30px;
+    height: 100%;
+    width: 100vw;
+    margin: 0px;
+    flex-shrink: 0;
+    border-left: 2px solid #18181B;
+    transition: margin-left 0.5s;
+}
+
+
+/* Add a black background color to the top navigation bar */
+
+.topnav {
+    overflow: hidden;
+    background-color: #18181B;
+    transition: 0.5s;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    display: block;
+    background-color: none;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 50px;
+}
+
+.topnav .open-nav {
+    background-color: #18181B;
+}
+
+
+/* Style the search box inside the navigation bar */
+
+.topnav input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+
+@media screen and (max-width: 600px) {
+    .topnav a,
+    .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+
+/* 2 cols the orginal one*/
+
+.grid-container {
+    display: grid;
+    display: -moz-grid;
+    grid-template-columns: 100px, 2fr, 2fr;
+    grid-template-rows: 75px 2fr 2fr 100px;
+    grid-template-areas: "header header header" "sidebar content content" "sidebar content content" "footer footer footer";
+    gap: 0px;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    flex-shrink: 0;
+    border-left: 2px solid #18181B;
+    transition: margin-left 0.5s;
+}
+
+
+/* this one for the image page*/
+
+.grid-container3 {
+    display: grid;
+    display: -moz-grid;
+    grid-template-rows: 75px 2fr 100px;
+    grid-template-areas: "header " "sidebar" "footer  ";
+    gap: 0px;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    flex-shrink: 0;
+    border-left: 2px solid #18181B;
+    transition: margin-left 0.5s;
+}
+
+#content-flex {
+    height: 90vh;
+    width: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: #9147FF #18181B;
+    scrollbar-width: thin;
+}
+
+#content-flex::-webkit-scrollbar {
+    width: 5px;
+    background-color: #18181B;
+}
+
+#content-flex::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: #9147FF;
+}
+
+#content-flex::-webkit-scrollbar-thumb:hover {
+    background-color: #8036EE;
+}
+
+.image-grid {
+    position: relative;
+    justify-self: right;
+    height: 650px;
+    max-height: 650px;
+    width: 1300px;
+    margin-top: 60px;
+    margin-bottom: -120px;
+    padding-bottom: 100px;
+    grid-area: content;
+    display: grid;
+    display: -moz-grid;
+    gap: 10px 10px;
+    justify-items: center;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 300px);
+    grid-auto-columns: repeat(3, 300px);
+    grid-auto-columns: repeat(3, 300px);
+    transform: translate(15%, 50px);
+}
+
+.content {
+    transition: 0.5s;
+}
+
+.image-grid .images {
+    transition: 0.5s;
+}
+
+.image-grid .active {
+    transform: translate(-50px, 0);
+}
+
+.open-nav {
+    left: 0;
+    position: sticky;
+    display: block;
+    transform: translate(-50px, 0);
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 41px;
+    width: 40px;
+    max-height: 20px;
+    max-width: 20px;
+    margin: 0px;
+    margin-left: 0;
+    background-color: #0E0E10;
+    background-image: url('../images/open-nav-before.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+header {
+    grid-area: header;
+    top: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1000;
+    display: block;
+    max-height: fit-content;
+}
+
+footer {
+    z-index: 1000;
+    display: block;
+    grid-area: footer;
+}
+
+.user {
+    top: 0;
+    left: 100%;
+    position: sticky;
+    margin-top: 10px;
+    margin-right: 40px;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar-flex {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    flex-shrink: 0;
+    transition: 0.5s;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    height: 100vh;
+    width: 0px;
+    background-color: #18181B;
+    border-top: 2px solid #18181B;
+    border: 2px solid #18181B;
+}
+
+.sidebar ul {
+    list-style: none;
+    position: sticky;
+    top: 75px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#displayName {
+    float: right;
+    padding: 10px;
+    transform: translate(-15%, -130%);
+}
+
+.left-m {
+    margin-left: 2em;
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+.sidebar ul li a {
+    display: block;
+    margin-left: 0px;
+    padding: 15px 10px;
+    width: 100%;
+    text-decoration-line: none;
+    font-size: 18px;
+    color: white;
+}
+
+.sidebar a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #9147FF;
+}
+
+footer {
+    display: block;
+    margin-left: -1px;
+    grid-area: footer;
+    min-height: 100px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/*Flexbox styling for all submit and cancel buttons across login, registration, and post image pages*/
+
+.submit-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: left;
+}
+
+.submit,
+.cancel {
+    position: relative;
+    display: block;
+    height: 2.5em;
+    width: 30%;
+    max-width: 300px;
+    border: 1px solid lightslategray;
+    color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    cursor: pointer
+}
+
+.submit {
+    background-color: #18181B;
+}
+
+.cancel {
+    margin: 0;
+    height: 32px;
+    font-size: 13px;
+    text-decoration: none;
+    text-size-adjust: 12px;
+    text-align: center;
+    line-height: 32px;
+    vertical-align: middle;
+    background-color: darkred;
+}
+
+.submit:hover {
+    background-color: rgba(1, 120, 255, 0.664)
+}
+
+.cancel:hover {
+    background-color: rgb(192, 0, 0);
+}
+
+.title-center {
+    text-align: center;
+    font-size: 45px;
+}
+
+.required {
+    font-size: 12px;
+    color: red;
+}
+
+#logo {
+    display: block;
+    height: 10px;
+    width: 118px;
+    max-height: 10px;
+    max-width: 118px;
+    background-color: none;
+    background-image: url('../images/website-logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    transform: translate(-30%, 10%);
+}
+
+
+/*Specific to post image page only*/
+
+main .post-form {
+    position: relative;
+    grid-area: content;
+    justify-self: normal;
+    transform: translate(20%, 0);
+    overflow: auto;
+}
+
+#post-form {
+    transform: translate(20%, 20px);
+}
+
+input[type="file"] {
+    display: block;
+    height: 1px;
+    width: 1px;
+    visibility: hidden;
+}
+
+textarea {
+    font: inherit;
+    font-size: small;
+}
+
+#custom-file {
+    display: block;
+    height: 200px;
+    width: 50%;
+    border: 2px solid lightgrey;
+    background-image: url("../images/Image_submit.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*Specific to login page only*/
+
+#login-form {
+    border: 2px solid #9147FF;
+    width: 25%;
+    padding: 20px;
+    transform: translate(125%, 40%);
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 50%;
+}
+
+#login-form input[type="text"]:focus,
+#login-form input[type="password"]:focus {
+    width: 100%;
+}
+
+#login-form .submit-flex {
+    transform: translate(20%, 0%);
+}
+
+#login-cancel {
+    height: 31px;
+    line-height: 29px;
+}
+
+
+/*Specific to registration page only*/
+
+#registration-form {
+    border: 2px solid #9147FF;
+    width: 25%;
+    padding: 20px;
+    transform: translate(125%, 15%);
+}
+
+#registration-form input[type="text"],
+#registration-form input[type="password"],
+#registration-form input[type="email"] {
+    width: 60%;
+}
+
+#registration-form input[type="text"]:focus,
+#registration-form input[type="password"]:focus,
+#registration-form input[type="email"]:focus {
+    width: 100%;
+}
+
+#registration-submit-flex {
+    transform: translate(20%, 0%);
+}
+
+
+/*More images button*/
+
+.more-images,
+.less-images {
+    justify-self: center;
+    align-self: center;
+    height: 2rem;
+    width: 200px;
+    background-color: #9147FF;
+    color: white;
+}
+
+.more-images:hover,
+.less-images:hover {
+    cursor: pointer;
+}
+
+#image-show-flex {
+    position: sticky;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    transform: translate(139%, 0%);
+}
+
+
+/* css grid for imagePage  */
+
+.grid-container-imagePage {
+    background-color: #18181B;
+    display: grid;
+    grid-template-rows: 0.5fr 5fr 1fr;
+    grid-template-areas: "Title" "Image" "Description";
+}
+
+#title-imagePage {
+    padding: 1em;
+    border-bottom: 2px solid #9147FF;
+    text-align: center;
+    grid-area: Title;
+}
+
+.middleSection-imagePage {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "imageP Comments";
+    grid-area: Image;
+}
+
+.imageSection-imagePage {
+    display: grid;
+    justify-content: center;
+    padding: 1rem 1rem;
+    grid-area: imageP;
+}
+
+#imageProp-imagePage {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.Comments {
+    display: grid;
+    grid-template-rows: 2fr 0.5fr;
+    grid-template-areas: "commentDB" "userComment";
+    grid-area: Comments;
+}
+
+.userComment {
+    grid-area: userComment;
+}
+
+.commentDB {
+    grid-area: commentDB;
+    max-height: 275px;
+    overflow-y: auto;
+    transform: translate(0, 10px);
+    scrollbar-color: #9147FF #18181B;
+    scrollbar-width: thin;
+}
+
+.commentDB::-webkit-scrollbar {
+    width: 5px;
+    background-color: #18181B;
+}
+
+.commentDB::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: #9147FF;
+}
+
+.commentDB::-webkit-scrollbar-thumb:hover {
+    background-color: #8036EE;
+}
+
+#Description {
+    grid-area: Description;
+    transform: translate(5%, 10%);
+}
+
+.text-container {
+    padding: 1rem 0em 0rem;
+    height: 100%;
+    position: relative;
+}
+
+.text-container textarea {
+    background: transparent;
+    color: white;
+    width: 100%;
+    outline: none;
+    border-top: 2px solid #9147FF;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: #9147FF;
+    border: none;
+    color: white;
+    padding: 4x 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.grid-imagePage {
+    display: grid;
+}
+
+
+/*
+.ImagePage-grid-container * {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas: "ImagePage-Title" "ImagePage-Content";
+}
+
+.ImagePage-Title {
+    grid-area: ImagePage-Title;
+}
+
+.ImagePage-Content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: "Image-Area ImagePage-CommentsDB" "ImagePage-Description ImagePage-UserComment";
+    grid-area: ImagePage-Content;
+}
+
+.ImagePage-Image-Area {
+    grid-area: ImagePage-Image-Area;
+}
+
+.ImagePage-CommentsDB {
+    grid-area: ImagePage-CommentsDB;
+}
+
+.ImagePage-Description {
+    grid-area: ImagePage-Description;
+}
+
+.ImagePage-UserComment {
+    grid-area: ImagePage-UserComment;
+}
+*/
+
+
+/* .more-images {
+    transform: translate(300%, 20px);
+}
+.less-images {
+    transform: translate
+} */

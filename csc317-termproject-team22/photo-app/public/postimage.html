@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Post Image | Snap-22</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/f25554f4a2.js" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" src="javascripts/sidebarstyle.js"></script>
+    <script defer type="text/javascript" src="javascripts/postimagescript.js"></script>
+    <script defer type="text/javascript" src="javascripts/formvalidation.js"></script>
+    <script defer type="text/javascript" src="javascripts/searchBar.js"></script>
+</head>
+
+<body class="grid-container">
+    <header class="topnav">
+        <a href="javascript:void(0)" class="open-nav"></a>
+        <a id="logo" class="active" href="/"></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search.." name="search">
+            <a id="search-submit"></a>
+        </div>
+        <p id="displayName"></p>
+    </header>
+
+    <nav class="sidebar sidebar-flex">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+            <div id="displayLogin">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Sign Up/Register</a></li>
+            </div>
+            <div id="displayContent">
+                <li><a href="/post-image">Post Image</a></li>
+                <form id="logout" action="/logout" method="POST"><input type="hidden" name="logout" value="value" />
+                    <li> <a class="pointer" onclick="document.getElementById('logout').submit();">Logout</a></form>
+                </li>
+            </div>
+        </ul>
+    </nav>
+
+    <main class="postform content">
+        <form id="post-form" action="/post-image" method="POST" enctype="multipart/form-data">
+            <h1> Post New Image </h1>
+            <br />
+            <br />
+            <input type="text" placeholder="Image Title" name="title">
+            <p id="title-required" class="required"><br /></p>
+            <textarea placeholder="Write a description" name="description"></textarea>
+            <p id="description-required" class="required"><br /></p>
+            <label for="image"> Insert Image: </label>
+            <br />
+            <br />
+            <a href="#" id="custom-file"></a>
+            <input type="file" name="image">
+            <p id="image-required" class="required"><br /></p>
+            Google link is just a placeholder for now, will replace with actual link later
+            <label for="image-checkbox">Agree to<a href="google.com">Acceptable Use Policy</a></label>
+            <input type="checkbox" name="image-checkbox" id="acceptable-checkbox">
+            <br />
+            <br />
+            <br />
+            <div class="submit-flex">
+                <input type="submit" name="submit" value="Post" class="submit">
+                <a href="/" class="cancel"> Cancel </a>
+            </div>
+            <br />
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Post Image | Snap-22</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <script src="https://kit.fontawesome.com/f25554f4a2.js" crossorigin="anonymous"></script>
+        <script defer type="text/javascript" src="javascripts/sidebarstyle.js"></script>
+        <script defer type="text/javascript" src="javascripts/postimagescript.js"></script>
+        <script defer type="text/javascript" src="javascripts/formvalidation.js"></script>
+    </head>
+
+    <body>
+
+        <a href="javascript:void(0)" class="open-nav"></a>
+
+        <div class="page-flex">
+            <div class="sidebar sidebar-flex">
+                <a href="/">Home</a>
+                <a href="/aboutus">About Us</a>
+                <a href="/post-image">Post Image</a>
+                <a href="/login">Login</a>
+                <a href="/register">Sign Up/Register</a>
+            </div>
+            <div class="grid-container">
+                <header class="header"> 
+                    <div class="topnav">
+                        <a class="active" href="/">LOGO</a>
+                        <input type="text" placeholder="Search..">
+                        <input type="button" name="user" class = "user">
+                    </div>
+
+                    <br />
+                    <br />
+                </header>
+                <div>
+                    <form id="post-form" action="/post-image" method="POST" enctype="multipart/form-data">
+                        <h1> Post New Image </h1>
+                        <br />
+                        <br />
+                        <input type="text" placeholder="Image Title" name="title">
+                        <p id="title-required" class="required"><br /></p>
+                        <textarea placeholder="Write a description" name="description"></textarea>
+                        <p id="description-required" class="required"><br /></p>
+                        <label for="image"> Insert Image: </label>
+                        <br />
+                        <br />
+                        <a href="#" id="custom-file"></a>
+                        <input type="file" name="image">
+                        <p id="image-required" class="required"><br /></p>
+                        Google link is just a placeholder for now, will replace with actual link later
+                        <label for="image-checkbox">Agree to<a href="google.com">Acceptable Use Policy</a></label>
+                        <input type="checkbox" name="image-checkbox" id="acceptable-checkbox">
+                        <br />
+                        <br />
+                        <br />
+                        <div class="submit-flex">
+                            <input type="submit" name="submit" value="Post" class="submit">
+                            <a href="/" class="cancel"> Cancel </a>
+                        </div>
+                        <br />
+                    </form>
+                </div>
+                <footer class="footer"></footer>
+
+            </div>
+        </div>
+    </body>
+</html> -->
